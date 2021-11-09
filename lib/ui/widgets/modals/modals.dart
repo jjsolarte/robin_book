@@ -30,6 +30,7 @@ class CustomModals {
                 onPressed: onPressed ?? () {
                   BlocProvider.of<FavoritesBloc>(context)
                       .add(FavoritesAddEvent(doct: doc));
+                  Navigator.of(context).pop();
                 },
                 child: const Text(
                   'Agregar a Favoritos',
